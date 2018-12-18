@@ -1,0 +1,20 @@
+#windows:
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+#python
+*.py[cod]
+*.so
+*.egg
+*.egg-info
+dist
+build
+
+#my configurations:
+__pycache__
+flask_env
+logs
+migrations
+mytest
+test

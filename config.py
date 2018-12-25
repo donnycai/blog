@@ -10,12 +10,12 @@ class Config(object):
         'sqlite:///' + os.path.join(basedir, 'app.db')
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 
-    MAIL_SERVER = 'smtp@163.com'
+    MAIL_SERVER = 'smtp.163.com'
     MAIL_PORT = '25'
     # MAIL_SERVER = '127.0.0.1'
     MAIL_USE_TLS = False
-    MAIL_USERNAME = 'donny'
+    MAIL_USERNAME = 'c_qdong@163.com'
     MAIL_PASSWORD = '1qaz2wsx3edc'
-    ADMINS = ['490026468@qq.com']
+    ADMINS = ['c_qdong@163.com']
 
     POSTS_PER_PAGE = 10

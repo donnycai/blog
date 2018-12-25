@@ -18,3 +18,4 @@ logs
 migrations
 mytest
 test
+*.db

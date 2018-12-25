@@ -14,8 +14,9 @@ class Config(object):
     MAIL_PORT = '25'
     # MAIL_SERVER = '127.0.0.1'
     MAIL_USE_TLS = False
-    MAIL_USERNAME = 'c_qdong@163.com'
-    MAIL_PASSWORD = '1qaz2wsx3edc'
-    ADMINS = ['c_qdong@163.com']
+    MAIL_USERNAME = os.environ.get('MAIL_USERNAME')
+    MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD')
+    ADMINS = os.environ.get('ADMINS')
+    ADMINS_MAIL = os.environ.get('ADMINS_MAIL')
 
     POSTS_PER_PAGE = 10

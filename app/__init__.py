@@ -23,14 +23,14 @@ if not app.debug:
     if app.config['MAIL_SERVER']:
         auth = None
         if app.config['MAIL_USERNAME'] or app.config['MAIL_PASSWORD']:
-            auth = ('c_qdong@163.com', '1qaz2wsx3edc')
+            auth = (app.config['MAIL_USERNAME'], app.config['MAIL_PASSWORD'])
         secure = None
         if app.config['MAIL_USE_TLS']:
             secure = ()
         mail_handler = SMTPHandler(
             mailhost=('smtp.163.com', 25),
-            fromaddr='<c_qdong@163.com>',
-            toaddrs='<490026468@qq.com>',
+            fromaddr=os.environ.get('ADMINS'),
+            toaddrs='<{}}>'.format(os.environ.get('ADMINS_MAIL')),
             subject='Microblog Failure',
             credentials=auth, secure=secure)
 
